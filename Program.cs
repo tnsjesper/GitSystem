@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using GitSystem.Helper;
 using Spectre.Console;
 
 var version = "1.0.0";
@@ -23,14 +24,44 @@ var action = AnsiConsole.Prompt(
         }));
 
 
-AnsiConsole.WriteLine($"Run the {action} Section.");
+AnsiConsole.WriteLine($"[bold,gray]Run the {action} Section.\n\n");
 
-Process cmd = new Process();
 switch (action)
 {
     case "Git Login":
     {
-        AnsiConsole.Markup($"[bold] Selected {action}![/]");
+        AnsiConsole.Markup($"[bold] Selected {action}![/]\n");
+        AnsiConsole.Markup($"[white]:check_mark_button: Check git and gh installation[/\n]");
+
+
+        if (await BashHelper.ExecuteCommand("which gh") != "")
+            AnsiConsole.Markup("[green] Github Cli is Installed![/]\n");
+        else
+        {
+            AnsiConsole.Markup("[red]Github Cli is not installed![/]\n");
+            AnsiConsole.Markup("[gray]Install Github Cli[/]\n");
+
+            await BashHelper.ExecuteCommand("sudo apt update && sudo apt install gh");
+        }
+
+        if (await BashHelper.ExecuteCommand("which git") != "")
+            AnsiConsole.Markup("[green]Git is Installed![/]\n");
+        else
+        {
+            AnsiConsole.Markup("[red]Git is not installed![/]\n");
+            AnsiConsole.Markup("[gray]Install Git[/]");
+
+            await BashHelper.ExecuteCommand("sudo apt install git-all");
+        }
+
+        if (Environment.GetEnvironmentVariable("GITHUB_AUTH_TOKEN") != "")
+        {
+            AnsiConsole.Markup("[red] Can't  Login to Github! Please set the GITHUB_AUTH_TOKEN[/]");
+            return;
+        }
+
+        await BashHelper.ExecuteCommand(
+            $"gh auth login --with-token {Environment.GetEnvironmentVariable("GITHUB_AUTH_TOKEN")}");
     }
         break;
 
