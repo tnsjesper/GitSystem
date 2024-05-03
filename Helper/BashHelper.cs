@@ -37,11 +37,11 @@ public class BashHelper
         cmd.Start();
 
         cmd.StandardInput.WriteLine(command);
-        AnsiConsole.Markup($"[gray]Execute Command: {command}[/]");
         cmd.StandardInput.Flush();
         cmd.StandardInput.Close();
         cmd.WaitForExit();
 
+        Console.WriteLine("\n");
         return Task.FromResult(cmd);
     }
 
