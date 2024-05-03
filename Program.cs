@@ -11,7 +11,6 @@ var action = AnsiConsole.Prompt(
     new SelectionPrompt<string>()
         .Title("[bold white]Perform an Action to the Git Server System[/]")
         .PageSize(10)
-        .MoreChoicesText("[grey](Move up and down to reveal more fruits)[/]")
         .AddChoices(new[]
         {
             "Git Login", "Lobby Server", "SMP-Spawn Server",
@@ -24,11 +23,10 @@ switch (action)
 {
     case "Git Login":
     {
-        await CheckGit.CheckGitInstallation(true);
-        
+        await AutoCommand.CheckGitInstallation(true);
 
 
-        var token = AnsiConsole.Ask<string>("[bold white]Provide a Token to login: [/]");
+        var token = AnsiConsole.Ask<string>("[bold white]:incoming_envelope: Provide a Token to login: [/]");
         AnsiConsole.Markup($"[gray]Token: {token}[/]\n");
 
         await BashHelper.CustomExecute($"gh auth login --with-token {token}");
@@ -39,39 +37,45 @@ switch (action)
     case "Lobby Server":
     {
         // Lobby Server
-        await CheckGit.CheckGitInstallation(true);
-        
-        
-        
-        
+        await AutoCommand.CheckGitInstallation(true);
+
+        await AutoCommand.SectionPullPush("Lobby", "/crystopia/Lobby/");
     }
         break;
 
 
     case "SMP-Spawn Server":
     {
-        AnsiConsole.Markup($"[bold] Selected {action}![/]");
+        await AutoCommand.CheckGitInstallation(true);
+
+        await AutoCommand.SectionPullPush("SMP-Spawn", "/crystopia/SMP-Spawn");
     }
         break;
 
 
     case "SMP-World Server":
     {
-        AnsiConsole.Markup($"[bold] Selected {action}![/]");
+        await AutoCommand.CheckGitInstallation(true);
+
+        await AutoCommand.SectionPullPush("SMP-World", "/crystopia/SMP-World");
     }
         break;
 
 
     case "SMP-Farm Server":
     {
-        AnsiConsole.Markup($"[bold] Selected {action}![/]");
+        await AutoCommand.CheckGitInstallation(true);
+
+        await AutoCommand.SectionPullPush("SMP-Farm", "/crystopia/SMP-Farm");
     }
         break;
 
 
     case "Proxy Server":
     {
-        AnsiConsole.Markup($"[bold] Selected {action}![/]");
+        await AutoCommand.CheckGitInstallation(true);
+
+        await AutoCommand.SectionPullPush("Proxy", "/crystopia/Proxy");
     }
         break;
 }

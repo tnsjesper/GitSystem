@@ -42,6 +42,8 @@ public class BashHelper
         cmd.WaitForExit();
 
         Console.WriteLine("\n");
+        AnsiConsole.Markup("[gray bold]:desktop_computer: Output: [/]\n");
+        AnsiConsole.Markup($" [gray]{cmd.StandardOutput.ReadToEnd()}[/]\n\n");
         return Task.FromResult(cmd);
     }
 

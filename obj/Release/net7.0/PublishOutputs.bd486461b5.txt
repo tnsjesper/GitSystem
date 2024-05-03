@@ -1,0 +1,7 @@
+C:\Users\jespe\AppData\Local\Temp\rider-publish7573787975794116138\GitSystem.exe
+C:\Users\jespe\AppData\Local\Temp\rider-publish7573787975794116138\GitSystem.dll
+C:\Users\jespe\AppData\Local\Temp\rider-publish7573787975794116138\GitSystem.deps.json
+C:\Users\jespe\AppData\Local\Temp\rider-publish7573787975794116138\GitSystem.runtimeconfig.json
+C:\Users\jespe\AppData\Local\Temp\rider-publish7573787975794116138\GitSystem.pdb
+C:\Users\jespe\AppData\Local\Temp\rider-publish7573787975794116138\ANSIConsole.dll
+C:\Users\jespe\AppData\Local\Temp\rider-publish7573787975794116138\Spectre.Console.dll
