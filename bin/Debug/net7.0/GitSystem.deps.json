@@ -1,0 +1,57 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "GitSystem/1.0.0": {
+        "dependencies": {
+          "ANSI.Console": "2.5.0",
+          "Spectre.Console": "0.49.1"
+        },
+        "runtime": {
+          "GitSystem.dll": {}
+        }
+      },
+      "ANSI.Console/2.5.0": {
+        "runtime": {
+          "lib/net5.0/ANSIConsole.dll": {
+            "assemblyVersion": "2.5.0.0",
+            "fileVersion": "2.5.0.0"
+          }
+        }
+      },
+      "Spectre.Console/0.49.1": {
+        "runtime": {
+          "lib/net7.0/Spectre.Console.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.49.1.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GitSystem/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ANSI.Console/2.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xVszQd1HA/EusmX/xGeomPBy6YIY5soaCKPuoqbOpZHP5Sfvg2xYdliBIQtcKVDUgNj+5G++LkFPP2Mtm0DITA==",
+      "path": "ansi.console/2.5.0",
+      "hashPath": "ansi.console.2.5.0.nupkg.sha512"
+    },
+    "Spectre.Console/0.49.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-USV+pdu49OJ3nCjxNuw1K9Zw/c1HCBbwbjXZp0EOn6wM99tFdAtN34KEBZUMyRuJuXlUMDqhd8Yq9obW2MslYA==",
+      "path": "spectre.console/0.49.1",
+      "hashPath": "spectre.console.0.49.1.nupkg.sha512"
+    }
+  }
+}
