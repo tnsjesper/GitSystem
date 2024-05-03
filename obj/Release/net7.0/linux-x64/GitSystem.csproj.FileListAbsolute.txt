@@ -3,7 +3,6 @@ C:\Users\jespe\Desktop\Code\GitSystem\GitSystem\bin\Release\net7.0\linux-x64\Git
 C:\Users\jespe\Desktop\Code\GitSystem\GitSystem\bin\Release\net7.0\linux-x64\GitSystem.runtimeconfig.json
 C:\Users\jespe\Desktop\Code\GitSystem\GitSystem\bin\Release\net7.0\linux-x64\GitSystem.dll
 C:\Users\jespe\Desktop\Code\GitSystem\GitSystem\bin\Release\net7.0\linux-x64\GitSystem.pdb
-C:\Users\jespe\Desktop\Code\GitSystem\GitSystem\bin\Release\net7.0\linux-x64\ANSIConsole.dll
 C:\Users\jespe\Desktop\Code\GitSystem\GitSystem\bin\Release\net7.0\linux-x64\Spectre.Console.dll
 C:\Users\jespe\Desktop\Code\GitSystem\GitSystem\obj\Release\net7.0\linux-x64\GitSystem.csproj.AssemblyReference.cache
 C:\Users\jespe\Desktop\Code\GitSystem\GitSystem\obj\Release\net7.0\linux-x64\GitSystem.GeneratedMSBuildEditorConfig.editorconfig

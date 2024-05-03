@@ -1,0 +1,6 @@
+C:\Users\jespe\Desktop\Code\GitSystem\GitSystem\bin\Release\net7.0\publish\GitSystem.exe
+C:\Users\jespe\Desktop\Code\GitSystem\GitSystem\bin\Release\net7.0\publish\GitSystem.dll
+C:\Users\jespe\Desktop\Code\GitSystem\GitSystem\bin\Release\net7.0\publish\GitSystem.deps.json
+C:\Users\jespe\Desktop\Code\GitSystem\GitSystem\bin\Release\net7.0\publish\GitSystem.runtimeconfig.json
+C:\Users\jespe\Desktop\Code\GitSystem\GitSystem\bin\Release\net7.0\publish\GitSystem.pdb
+C:\Users\jespe\Desktop\Code\GitSystem\GitSystem\bin\Release\net7.0\publish\Spectre.Console.dll

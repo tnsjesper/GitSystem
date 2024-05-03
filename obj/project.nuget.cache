@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Wy9hiEkm8oAD1BwC/1RjA7bnt6q/ltghlbQc7Jvb+Bqy4t1LWChAbxtf6fnYC02LOE8iWThVFts/QBmV1BzXMg==",
+  "dgSpecHash": "A2FGxlkloRnNF66Gk/h/Hbzsz6oTKha8C7+9ck0wZEvRldeoBG4SVdjApswhid1EhynoegIfGHnShU5Uq3n4nw==",
   "success": true,
   "projectFilePath": "C:\\Users\\jespe\\Desktop\\Code\\GitSystem\\GitSystem\\GitSystem.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jespe\\.nuget\\packages\\ansi.console\\2.5.0\\ansi.console.2.5.0.nupkg.sha512",
-    "C:\\Users\\jespe\\.nuget\\packages\\spectre.console\\0.49.1\\spectre.console.0.49.1.nupkg.sha512"
+    "C:\\Users\\jespe\\.nuget\\packages\\spectre.console\\0.49.1\\spectre.console.0.49.1.nupkg.sha512",
+    "C:\\Users\\jespe\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\7.0.18\\microsoft.netcore.app.host.linux-x64.7.0.18.nupkg.sha512"
   ],
   "logs": []
 }
