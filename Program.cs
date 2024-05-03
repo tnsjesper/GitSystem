@@ -50,10 +50,12 @@ switch (action)
 
         var token = AnsiConsole.Ask<string>("[bold white]Provide a Token to login: [/]");
         AnsiConsole.Markup($"[gray]Token: {token}[/]\n");
-        var gitlogin = $"gh auth login --with-token {token}";
-        await BashHelper.ExecuteCommand(gitlogin);
+
+       
+        
     }
         break;
+
 
     case "Lobby Server":
     {

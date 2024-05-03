@@ -1,8 +1,6 @@
 ﻿namespace GitSystem.Helper;
 
 // (c) Moonlight Panel - https://github.com/Moonlight-Panel/Installer/blob/v2/LICENSE
-
-
 using System.Diagnostics;
 
 public class BashHelper
@@ -23,6 +21,26 @@ public class BashHelper
 
         return output.Trim();
     }
+
+
+    // Add Custom Command Execute
+    public static async Task CustomExecute(string command)
+    {
+        Process cmd = new Process();
+        cmd.StartInfo.RedirectStandardInput = true;
+        cmd.StartInfo.RedirectStandardOutput = true;
+        cmd.StartInfo.CreateNoWindow = true;
+        cmd.StartInfo.UseShellExecute = false;
+        cmd.Start();
+        cmd.Start();
+
+        cmd.StandardInput.WriteLine(command);
+        cmd.StandardInput.Flush();
+        cmd.StandardInput.Close();
+        cmd.WaitForExit();
+        Console.WriteLine(cmd.StandardOutput.ReadToEnd());
+    }
+
 
     public static async Task<int> ExecuteCommandForExitCode(string command, string? workingDir = default)
     {
