@@ -51,8 +51,7 @@ switch (action)
         var token = AnsiConsole.Ask<string>("[bold white]Provide a Token to login: [/]");
         AnsiConsole.Markup($"[gray]Token: {token}[/]\n");
 
-       
-        
+        await BashHelper.CustomExecute($"gh auth login --with-token {token}");
     }
         break;
 
