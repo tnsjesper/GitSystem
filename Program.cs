@@ -2,7 +2,7 @@
 using GitSystem.Helper;
 using Spectre.Console;
 
-var version = "1.0.0";
+var version = "1.1.0";
 
 AnsiConsole.Markup($"[bold gray]Welcome to the[/] [bold cyan]GitSystem[/]\n");
 AnsiConsole.Markup($"[bold]- Version: {version}[/]\n\n");
