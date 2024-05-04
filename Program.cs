@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using GitSystem.Helper;
+﻿using GitSystem.Helper;
 using Spectre.Console;
 
 var version = "1.1.0";
@@ -31,7 +30,7 @@ switch (action)
     {
         await AutoCommand.CheckGitInstallation(true);
 
-        await BashHelper.CustomExecute($"gh auth login && ");
+        await BashHelper.CustomExecute($"gh auth login");
     }
         break;
 

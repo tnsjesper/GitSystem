@@ -18,7 +18,9 @@ public class BashHelper
         cmd.StartInfo.CreateNoWindow = true;
         cmd.StartInfo.UseShellExecute = false;
         cmd.Start();
+        
         AnsiConsole.Markup("[gray bold]:desktop_computer: Command Output: [/]\n");
+        
         cmd.StandardInput.WriteLine(command);
         cmd.StandardInput.Flush();
         cmd.StandardInput.Close();
