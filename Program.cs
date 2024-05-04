@@ -7,6 +7,9 @@ var version = "1.0.0";
 AnsiConsole.Markup($"[bold gray]Welcome to the[/] [bold cyan]GitSystem[/]\n");
 AnsiConsole.Markup($"[bold]- Version: {version}[/]\n\n");
 
+
+// Here you can Change the Optons from your Section
+
 var action = AnsiConsole.Prompt(
     new SelectionPrompt<string>()
         .Title("[bold white]Perform an Action to the Git Server System[/]")
@@ -18,6 +21,9 @@ var action = AnsiConsole.Prompt(
         }));
 
 
+// Import the Options from the Section in the case
+
+
 AnsiConsole.Markup($"[bold] Selected {action}![/]\n\n\n");
 switch (action)
 {
@@ -25,20 +31,17 @@ switch (action)
     {
         await AutoCommand.CheckGitInstallation(true);
 
-
-        var token = AnsiConsole.Ask<string>("[bold white]:incoming_envelope: Provide a Token to login: [/]");
-        AnsiConsole.Markup($"[gray]Token: {token}[/]\n");
-
-        await BashHelper.CustomExecute($"gh auth login --with-token {token}");
+        await BashHelper.CustomExecute($"gh auth login && ");
     }
         break;
 
 
     case "Lobby Server":
     {
-        // Lobby Server
+      
         await AutoCommand.CheckGitInstallation(true);
 
+        // Edit here the Service and the pash to run git commands
         await AutoCommand.SectionPullPush("Lobby", "/crystopia/Lobby/");
     }
         break;
