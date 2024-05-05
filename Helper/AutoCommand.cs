@@ -47,7 +47,7 @@ public class AutoCommand
                 .PageSize(10)
                 .AddChoices(new[]
                 {
-                    "Pull", "Push", "Run Command"
+                    "Pull", "Push", "Add Files", "Commit", "Run Command", "Exit"
                 }));
 
 
@@ -66,13 +66,29 @@ public class AutoCommand
             }
                 break;
 
+
+            case "Commit":
+
+
+            {
+                var message = AnsiConsole.Ask<string>("[bold white]:incoming_envelope: Commit Message: [/]");
+                AnsiConsole.Markup($"[gray] Used: {service} in Path {path}[/]\n");
+                
+                AnsiConsole.Markup($"[white bold]Run the Commit Action![/]\n\n\n");
+                AnsiConsole.Markup($"cd {path} && git commit -m='{message}'");
+                BashHelper.CustomExecute($"cd {path} && git commit -a -m '{message}'");
+                AnsiConsole.Markup($"[green bold]Done![/] [white bold]Runned Command in {path}[/]\n");
+            }
+                break;
+
+
             case "Pull":
 
 
             {
                 AnsiConsole.Markup($"[gray] Used: {service} in Path {path}[/]\n");
                 AnsiConsole.Markup($"[white bold]Run the Pull Action![/]\n\n\n");
-                await BashHelper.CustomExecute($"cd {path} && git fetch && git pull -r");
+                await BashHelper.CustomExecute($"cd {path} && git fetch && git pull");
                 AnsiConsole.Markup($"[green bold]Done![/] [white bold]Pulled in {path}[/]\n");
             }
                 break;
@@ -87,6 +103,13 @@ public class AutoCommand
                 AnsiConsole.Markup($"https://github.com/Crystopia/Server.{service}\n");
             }
                 break;
+            
+            case "Exit":
+            {
+                await BashHelper.CustomExecute("^C");
+            }
+                break;
+            
         }
 
 

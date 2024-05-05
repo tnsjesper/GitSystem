@@ -1,7 +1,7 @@
 ﻿using GitSystem.Helper;
 using Spectre.Console;
 
-var version = "1.1.0";
+var version = "1.2.0";
 
 AnsiConsole.Markup($"[bold gray]Welcome to the[/] [bold cyan]GitSystem[/]\n");
 AnsiConsole.Markup($"[bold]- Version: {version}[/]\n\n");
@@ -16,7 +16,7 @@ var action = AnsiConsole.Prompt(
         .AddChoices(new[]
         {
             "Git Login", "Lobby Server", "SMP-Spawn Server",
-            "SMP-World Server", "SMP-Farm Server", "Proxy Server",
+            "SMP-World Server", "SMP-Farm Server", "Proxy Server", "Exit"
         }));
 
 
@@ -37,7 +37,6 @@ switch (action)
 
     case "Lobby Server":
     {
-      
         await AutoCommand.CheckGitInstallation(true);
 
         // Edit here the Service and the pash to run git commands
@@ -78,6 +77,13 @@ switch (action)
         await AutoCommand.CheckGitInstallation(true);
 
         await AutoCommand.SectionPullPush("Proxy", "/crystopia/Proxy");
+    }
+        break;
+
+
+    case "Exit":
+    {
+        await BashHelper.CustomExecute("^C");
     }
         break;
 }
